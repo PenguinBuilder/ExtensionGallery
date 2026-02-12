@@ -8,7 +8,7 @@ return new Promise(r => {
 
         reader.onload = function (event) {
             const fileContent = event.target.result;
-            r(fileContent)
+            r([fileContent, crypto.randomUUID()])
         };
         reader.readAsText(file);
     }).click();
