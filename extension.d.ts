@@ -1,20 +1,3 @@
-declare var javascript: any;
-declare var FieldColour: any;
-declare var FieldAngle: any;
-declare var ToolboxInfo: any;
-declare var DATA: any;
-declare namespace Blockly {
-    type MenuGenerator = any;
-    var FieldTextInput: any;
-    var FieldNumber: any;
-    var FieldDropdown: any;
-    var FieldCheckbox: any;
-    var Blocks: any;
-    type Block = any;
-}
-declare var toolbox: any;
-declare var workspace: any;
-declare var catid: any;
 interface PenguinExtension {
     Info(): Category;
     generator: {
