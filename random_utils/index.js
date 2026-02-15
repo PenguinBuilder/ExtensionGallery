@@ -4,12 +4,11 @@
         Info() {
             return {
                 name: "Random Utils",
-                color: "#888888",
+                color: "#1ABC9C",
                 ID: "random_utils",
                 blocks: [
                     {
                         opcode: "fetch",
-                        color: 210,
                         blockType: Penguin.blockType.Value(["Object", "String"]),
                         args: [
                             Penguin.Argument.Dummy([
@@ -24,7 +23,6 @@
                     },
                     {
                         opcode: "encode",
-                        color: 210,
                         blockType: Penguin.blockType.Value("String"),
                         args: [
                             Penguin.Argument.Value("str", "String", [

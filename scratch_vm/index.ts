@@ -3,12 +3,11 @@
         Info() {
             return {
                 name: "Scratch Vm",
-                color: "#0000FF",
+                color: "#FFCC33",
                 ID: "Scratch_VM",
                 blocks: [
                     {
                         opcode: "get_sprite_name",
-                        color: 225,
                         blockType: Penguin.blockType.Value("Sprite"),
                         args: [
                             Penguin.Argument.Value("Name", "String", [
@@ -18,7 +17,6 @@
                     },
                     {
                         opcode: "get_value",
-                        color: 225,
                         blockType: Penguin.blockType.Value("Number"),
                         args: [
                             Penguin.Argument.Value("Sprite", "Sprite", [
@@ -34,7 +32,6 @@
                     },
                     {
                         opcode: "get_sprite",
-                        color: 225,
                         blockType: Penguin.blockType.Value("Sprite"),
                         args: [
                             Penguin.Argument.Dummy([
@@ -48,7 +45,6 @@
                     },
                     {
                         opcode: "is_stage",
-                        color: 225,
                         blockType: Penguin.blockType.Value("Boolean"),
                         args: [
                             Penguin.Argument.Dummy([
