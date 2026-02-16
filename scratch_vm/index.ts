@@ -1,5 +1,8 @@
 (() => {
     class Extension implements PenguinExtension {
+        Types = {
+            Sprite: Penguin?.Types?.BTAB,
+        };
         Info() {
             return {
                 name: "Scratch Vm",

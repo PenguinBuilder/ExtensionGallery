@@ -1,6 +1,9 @@
 "use strict";
 (() => {
     class Extension {
+        Types = {
+            Sprite: Penguin.Types.BTAB,
+        };
         Info() {
             return {
                 name: "Scratch Vm",

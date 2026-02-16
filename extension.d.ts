@@ -3,6 +3,7 @@ interface PenguinExtension {
     generator: {
         [generator: string]: (block: Block) => string;
     };
+    Types?: Record<string, number>;
 }
 type blockType = {
     kind: "Statement";
@@ -74,10 +75,20 @@ type fieldType = {
     ID: string;
     default: string;
 };
+
 declare const Penguin: {
+    Types: {
+        HEXAGONAL: number,
+        ROUND: number,
+        SQUARE: number,
+        TAB: number,
+        BTAB: number,
+        OCTOGON: number,
+        SQUIRCLE: number,
+    },
     _getType(type: string | string[]): string | string[] | null;
     _setFields(input: any, fields?: fieldType[]): void;
-    _getMenuItems(value: string[] | Record<string, string>): Blockly.MenuGenerator;
+    _getMenuItems(value: string[] | Record<string, string>): any;
     LoadExtension(Extension: new () => PenguinExtension): void;
     Block: {
         new (BlocklyBlock: any, BlocklyGenerator: any): {
