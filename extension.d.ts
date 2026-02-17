@@ -85,6 +85,7 @@ declare const Penguin: {
         BTAB: number,
         OCTOGON: number,
         SQUIRCLE: number,
+        LEAF: number,
     },
     _getType(type: string | string[]): string | string[] | null;
     _setFields(input: any, fields?: fieldType[]): void;

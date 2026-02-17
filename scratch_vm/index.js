@@ -2,7 +2,7 @@
 (() => {
     class Extension {
         Types = {
-            Sprite: Penguin.Types.BTAB,
+            Sprite: Penguin.Types.LEAF,
         };
         Info() {
             return {
