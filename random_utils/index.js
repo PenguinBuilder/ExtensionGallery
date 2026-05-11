@@ -9,14 +9,21 @@
                 blocks: [
                     {
                         opcode: "fetch",
-                        blockType: Penguin.blockType.Value(["Object", "String"]),
+                        blockType: Penguin.blockType.Value(["String", "Object"]),
                         args: [
                             Penguin.Argument.Dummy([
                                 Penguin.Field.Text("fetch"),
                                 Penguin.Field.TextInput("url", "url"),
                                 Penguin.Field.MenuInput("type", {
-                                    JSON: "json",
                                     Text: "text",
+                                    JSON: "json",
+                                }, function (s) {
+                                    if (s == "json") {
+                                        this.setOutputType(true, "Object");
+                                    }
+                                    else {
+                                        this.setOutputType(true, "String");
+                                    }
                                 })
                             ])
                         ]
