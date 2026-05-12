@@ -58,32 +58,32 @@ type fieldType = {
     kind: "text_input";
     ID: string;
     default: string;
-    on_change(this: Block, nv: string): void;
+    on_change(this: Block, nv: string): void | boolean;
 } | {
     kind: "number_input";
     ID: string;
     default: number;
-    on_change(this: Block, nv: number): void;
+    on_change(this: Block, nv: number): void | boolean;
 } | {
     kind: "angle_input";
     ID: string;
     default: number;
-    on_change(this: Block, nv: number): void;
+    on_change(this: Block, nv: number): void | boolean;
 } | {
     kind: "menu_input";
     ID: string;
     value: string[] | Record<string, any>;
-    on_change(this: Block, nv: string): void;
+    on_change(this: Block, nv: string): void | boolean;
 } | {
     kind: "checkbox_input";
     ID: string;
     default: boolean;
-    on_change(this: Block, nv: boolean): void;
+    on_change(this: Block, nv: boolean): void | boolean;
 } | {
     kind: "color_input";
     ID: string;
     default: string;
-    on_change(this: Block, nv: string): void;
+    on_change(this: Block, nv: string): void | boolean;
 };
 declare const Penguin: {
     Types: {
@@ -127,11 +127,11 @@ declare const Penguin: {
     };
     Field: {
         Text(value: string, ID?: string): fieldType;
-        TextInput(ID: string, _default?: string, on_change?: (this: Block, val: string) => void): fieldType;
-        NumberInput(ID: string, _default?: number, on_change?: (this: Block, val: number) => void): fieldType;
-        AngleInput(ID: string, _default?: number, on_change?: (this: Block, val: number) => void): fieldType;
-        MenuInput(ID: string, items: string[] | Record<string, any>, on_change?: (this: Block, val: any) => void): fieldType;
-        CheckboxInput(ID: string, _default?: boolean, on_change?: (this: Block, val: boolean) => void): fieldType;
-        ColorInput(ID: string, _default?: string, on_change?: (this: Block, val: string) => void): fieldType;
+        TextInput(ID: string, _default?: string, on_change?: (this: Block, val: string) => void | boolean): fieldType;
+        NumberInput(ID: string, _default?: number, on_change?: (this: Block, val: number) => void | boolean): fieldType;
+        AngleInput(ID: string, _default?: number, on_change?: (this: Block, val: number) => void | boolean): fieldType;
+        MenuInput(ID: string, items: string[] | Record<string, any>, on_change?: (this: Block, val: any) => void | boolean): fieldType;
+        CheckboxInput(ID: string, _default?: boolean, on_change?: (this: Block, val: boolean) => void | boolean): fieldType;
+        ColorInput(ID: string, _default?: string, on_change?: (this: Block, val: string) => void | boolean): fieldType;
     };
 };

@@ -16,11 +16,11 @@
                                 Penguin.Field.MenuInput("type", {
                                     Text: "text",
                                     JSON: "json",
-                                }, function(s){
-                                    if(s == "json") {
-                                        this.setOutputType(true, "Object") 
+                                }, function(s) {
+                                    if (s == "json") {
+                                        this.setOutputType(true, "Object")
                                     } else {
-                                        this.setOutputType(true, "String") 
+                                        this.setOutputType(true, "String")
                                     }
                                 })
                             ])
